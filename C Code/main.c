@@ -6,7 +6,7 @@ void main()
 {
     while (true)
     {
-        leapYear();
+        weekPaySpent();
     }
 
     // int number = 5;

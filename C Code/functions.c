@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <math.h>
 
 int morePseudoCode()
 {
@@ -135,8 +136,77 @@ int leapYear()
     return 0;
 }
 
-int TextInputBirthdaySeason
+int textInputBirthdaySeason()
 {
+    // List of months
+    const char *months[12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    const char **pointer = months;
+    char *answer;
+
+    // Catch input
+    printf("What month were you born in?\n");
+    scanf("%s", &answer);
+
+    // printf("passed input");
+
+    bool check = false;
+
+    // while (*pointer != 0)
+    // {
+    //     printf("%s \n", *pointer);
+    //     ++pointer;
+    // }
+
+    // printf("%s", &months[0]);
+
+    for (size_t current = 0; sizeof months; current++)
+    {
+        printf("%s\n", months[current]);
+        // printf("debug\n");
+        // if (strncmp(months[current], answer))
+        // {
+        //     check = true;
+        //     printf("check is true\n");
+        //     break;
+        // }
+        // else
+        // {
+        //     printf("check is not true\n");
+        // }
+    }
+
+    if (!check)
+    {
+        printf("%s is not a month!", &answer);
+        return 0;
+    }
+    else
+    {
+        printf("%s is a month", &answer);
+    }
+
+    return 0;
+}
+
+int weekPaySpent(){
+
+    printf("Week of year?\n");
     
+    int week = 0;
+    scanf("%i", &week);
+    
+    printf("Pay week?\n");
+
+    char pay;
+    scanf(" %c", &pay);
+    
+    printf("Dollars spent?\n");
+    
+    float amount = 0;
+    scanf("%f", &amount);
+    
+    
+    printf("\nWeek: %i, Pay week: %c, Dollars spent: $%.2f", week, pay, amount);
+
     return 0;
 }
