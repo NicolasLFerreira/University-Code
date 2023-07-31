@@ -6,3 +6,4 @@ int biggestOfTwo();
 int leapYear();
 int textInputBirthdaySeason();
 int weekPaySpent();
+int multiplicationTable();

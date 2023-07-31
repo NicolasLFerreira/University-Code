@@ -188,25 +188,41 @@ int textInputBirthdaySeason()
     return 0;
 }
 
-int weekPaySpent(){
+int weekPaySpent()
+{
 
     printf("Week of year?\n");
-    
+
     int week = 0;
     scanf("%i", &week);
-    
+
     printf("Pay week?\n");
 
     char pay;
     scanf(" %c", &pay);
-    
+
     printf("Dollars spent?\n");
-    
+
     float amount = 0;
     scanf("%f", &amount);
-    
-    
+
     printf("\nWeek: %i, Pay week: %c, Dollars spent: $%.2f", week, pay, amount);
+
+    return 0;
+}
+
+int multiplicationTable()
+{
+
+    printf("Please enter a whole number:\n\n");
+
+    int number = 0;
+    scanf("%i", &number);
+
+    for (int i = 1; i <= 12; i++)
+    {
+        printf("%i x %i = %i\n", i, number, (i * number));
+    }
 
     return 0;
 }

@@ -6,7 +6,7 @@ void main()
 {
     while (true)
     {
-        weekPaySpent();
+        multiplicationTable();
     }
 
     // int number = 5;
