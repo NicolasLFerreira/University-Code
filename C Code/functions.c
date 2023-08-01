@@ -257,3 +257,25 @@ int ellipse()
 
     return 0;
 }
+
+int wholeCharReal()
+{
+    int wholeNumber = 0;
+    char ASCII = 0;
+    double realNumber = 0;
+
+    printf("Whole number?\n");
+    scanf("%i", &wholeNumber);
+    printf("ASCII character?\n");
+    scanf(" %c", &ASCII);
+    printf("Real number?\n");
+    scanf("%lf", &realNumber);
+
+    printf("\nThe user's input was:\n\n");
+
+    printf("Whole number is:     %i\n", wholeNumber);
+    printf("ASCII character is:  %c\n", ASCII);
+    printf("Real number is:      %lf\n", realNumber);
+
+    return 0;
+}

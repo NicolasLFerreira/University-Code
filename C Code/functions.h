@@ -9,3 +9,4 @@ int weekPaySpent();
 int multiplicationTable();
 int squareCalculator();
 int ellipse();
+int wholeCharReal();
