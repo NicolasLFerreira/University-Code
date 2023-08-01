@@ -7,3 +7,5 @@ int leapYear();
 int textInputBirthdaySeason();
 int weekPaySpent();
 int multiplicationTable();
+int squareCalculator();
+int ellipse();

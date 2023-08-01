@@ -190,7 +190,6 @@ int textInputBirthdaySeason()
 
 int weekPaySpent()
 {
-
     printf("Week of year?\n");
 
     int week = 0;
@@ -213,7 +212,6 @@ int weekPaySpent()
 
 int multiplicationTable()
 {
-
     printf("Please enter a whole number:\n\n");
 
     int number = 0;
@@ -223,6 +221,39 @@ int multiplicationTable()
     {
         printf("%i x %i = %i\n", i, number, (i * number));
     }
+
+    return 0;
+}
+
+int squareCalculator()
+{
+    printf("What is the length of one side?\n\n");
+
+    int sideLength = 0;
+    scanf("%i", &sideLength);
+
+    printf("The square's perimeter is: %i\n\n", sideLength * 4);
+    printf("The square's area is: %i", sideLength * sideLength);
+
+    return 0;
+}
+
+int ellipse()
+{
+    const float pi = 3.14159265359f;
+
+    float area = 0.0f;
+    float axisA = 0.0f;
+    float axisB = 0.0f;
+
+    printf("What is the ellipse's area?\n");
+    scanf("%f", &area);
+    printf("What is the length of one of the ellipse's axes?\n");
+    scanf("%f", &axisA);
+
+    axisB = area / (axisA * pi);
+
+    printf("The ellipse's other axis is: %.2f", axisB);
 
     return 0;
 }
