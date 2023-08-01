@@ -279,3 +279,55 @@ int wholeCharReal()
 
     return 0;
 }
+
+int threeTupleMaths()
+{
+    int first[3] = {0, 0, 0};
+    int second[3] = {0, 0, 0};
+    int solutions[3] = {0, 0, 0};
+
+    // Handles first array
+    printf("First Array Setup...\n\n");
+    for (int i = 0; i < 3; i++)
+    {
+        printf("  Please enter the %i%s value:\n", i + 1, (i == 0 ? "st" : (i == 1 ? "nd" : "rd")));
+        scanf("%i", &first[i]);
+    }
+
+    printf("\nFirst array is: { %i, %i, %i }\n\n", first[0], first[1], first[2]);
+
+    // Handles second array
+    printf("Second Array Setup...\n");
+    for (int i = 0; i < 3; i++)
+    {
+        printf("  Please enter the %i%s value:\n", i + 1, (i == 0 ? "st" : (i == 1 ? "nd" : "rd")));
+        scanf("%i", &second[i]);
+    }
+
+    printf("\nSecond array is: { %i, %i, %i }\n\n", second[0], second[1], second[2]);
+
+    printf("  C..a..l..c..u..l..a..t..i..n..g..\n");
+
+    // Addition
+    for (int i = 0; i < 3; i++)
+    {
+        solutions[i] = first[i] + second[i];
+    }
+    printf("\nAdding corresponding elements: { %i, %i, %i }\n", solutions[0], solutions[1], solutions[2]);
+
+    // Subtraction
+    for (int i = 0; i < 3; i++)
+    {
+        solutions[i] = first[i] - second[i];
+    }
+    printf("\nSubtracting corresponding elements: { %i, %i, %i }\n", solutions[0], solutions[1], solutions[2]);
+
+    // Multiplication
+    for (int i = 0; i < 3; i++)
+    {
+        solutions[i] = first[i] * second[i];
+    }
+    printf("\nMultiplying corresponding elements: { %i, %i, %i }\n\n", solutions[0], solutions[1], solutions[2]);
+
+    return 0;
+}

@@ -10,3 +10,4 @@ int multiplicationTable();
 int squareCalculator();
 int ellipse();
 int wholeCharReal();
+int threeTupleMaths();

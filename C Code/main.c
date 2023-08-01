@@ -6,7 +6,7 @@ void main()
 {
     while (true)
     {
-        ellipse();
+        threeTupleMaths();
     }
 
     // int number = 5;
