@@ -6,7 +6,7 @@ void main()
 {
     while (true)
     {
-        digitCounter();
+        lowerToUpper();
     }
 
     // int number = 5;

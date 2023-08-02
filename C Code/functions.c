@@ -343,3 +343,21 @@ int digitCounter()
 
     return 0;
 }
+
+int lowerToUpper()
+{
+    printf("Type in a lowercase five letter word:\n");
+    char input[5] = "";
+    scanf("%s", input);
+
+    printf("\nOriginal: %s\n", input);
+
+    for (int i = 0; i < 5; i++)
+    {
+        input[i] -= 32;
+    }
+
+    printf("\nCopy: %s", input);
+
+    return 0;
+}
