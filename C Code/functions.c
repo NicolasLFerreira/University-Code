@@ -331,3 +331,15 @@ int threeTupleMaths()
 
     return 0;
 }
+
+int digitCounter()
+{
+    int input = 0;
+
+    printf("Input a number:\n");
+    scanf("%i", &input);
+
+    printf("%i is %i digit(s).\n", input, (int)floor(log10((double)input)) + 1);
+
+    return 0;
+}

@@ -11,3 +11,4 @@ int squareCalculator();
 int ellipse();
 int wholeCharReal();
 int threeTupleMaths();
+int digitCounter();

@@ -6,7 +6,7 @@ void main()
 {
     while (true)
     {
-        threeTupleMaths();
+        digitCounter();
     }
 
     // int number = 5;
