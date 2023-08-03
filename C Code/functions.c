@@ -389,7 +389,7 @@ int inputComputation()
 
     printf("Enter the y value:\n");
     scanf("%f", &y);
-    
+
     a = x * y;
     b = x + y;
 
@@ -399,3 +399,18 @@ int inputComputation()
 
     return 0;
 }
+
+int supermanOrBatman()
+{
+    char input;
+
+    printf("Which hero is your favourite, Superman (S) or Batman (B)?\n");
+    scanf(" %c", &input);
+
+    if (input == 'S' || input == 's') printf("The user's favourite super hero is Superman");
+    else if (input == 'B' || input == 'b') printf("The user's favourite super hero is Batman");
+    else printf("Invalid response!");
+
+    return 0;
+}
+
