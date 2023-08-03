@@ -361,3 +361,22 @@ int lowerToUpper()
 
     return 0;
 }
+
+int floatToASCII()
+{
+    float input;
+    char string[9] = "";
+
+    printf("Enter a real number:\n");
+    scanf("%f", &input);
+    printf("Converting float input into ASCII C-String array...\n\n");
+    
+    sprintf(string, "%f", input);
+
+    for (int i = 0; i < 8; i++)
+    {
+        printf("Element %i is: '%c' which is ASCII %i\n", i, string[i], (int)string[i]);
+    }
+    return 0;
+}
+

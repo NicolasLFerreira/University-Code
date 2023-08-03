@@ -12,3 +12,4 @@ int ellipse();
 int wholeCharReal();
 int threeTupleMaths();
 int digitCounter();
+int floatToASCII();
