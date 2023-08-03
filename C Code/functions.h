@@ -13,3 +13,4 @@ int wholeCharReal();
 int threeTupleMaths();
 int digitCounter();
 int floatToASCII();
+int inputComputation();

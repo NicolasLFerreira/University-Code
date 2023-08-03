@@ -6,7 +6,7 @@ void main()
 {
     while (true)
     {
-        floatToASCII();
+        inputComputation();
     }
 
     // int number = 5;

@@ -370,7 +370,7 @@ int floatToASCII()
     printf("Enter a real number:\n");
     scanf("%f", &input);
     printf("Converting float input into ASCII C-String array...\n\n");
-    
+
     sprintf(string, "%f", input);
 
     for (int i = 0; i < 8; i++)
@@ -380,3 +380,22 @@ int floatToASCII()
     return 0;
 }
 
+int inputComputation()
+{
+    float x, y, a, b, result;
+
+    printf("Enter the x value:\n");
+    scanf("%f", &x);
+
+    printf("Enter the y value:\n");
+    scanf("%f", &y);
+    
+    a = x * y;
+    b = x + y;
+
+    result = b * b + a * (b - x) * (a + y);
+
+    printf("Computed: %f", result);
+
+    return 0;
+}
