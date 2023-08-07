@@ -4,17 +4,14 @@
 
 void main()
 {
+    // int age = 0;
+    // char string[8] = "nicolas";
+
+    // printf("%s", string);
+
+    // return;
     while (true)
     {
-        gradePercentToLetter();
+        gameAIResponse();
     }
-
-    // int number = 5;
-    // int *numberPtr = &number;
-
-    // int abc = 123;
-    // char buffer[10];
-    // sprintf(buffer, "%d", abc);
-
-    // printf(buffer);
 }

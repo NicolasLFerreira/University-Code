@@ -441,12 +441,51 @@ int gradePercentToLetter()
         grade = "C+";
     else if (percent >= 55)
         grade = "C";
-    else if (percent >=50)
+    else if (percent >= 50)
         grade = "C-";
     else
         grade = "D";
-        
+
     printf("%f%% is a '%s'", percent, grade);
 
     return 0;
 }
+
+int gameAIResponse()
+{
+    char health = ' ';
+    char distance = ' ';
+
+    printf("Is the player's health low or high (l/h)?\n");
+    scanf(" %c", &health);
+
+    printf("Where is the player, close or far (c/f)?\n");
+    scanf(" %c", &distance);
+
+    printf("\n");
+
+    if (health == 'l' && distance == 'c')
+    {
+        printf("The AI should attack.");
+    }
+    else if (health == 'h' && distance == 'f')
+    {
+        printf("The AI should go to sleep.");
+    }
+    else if (health == 'l' && distance == 'f')
+    {
+        printf("The AI should start searching.");
+    }
+    else
+    {
+        printf("The AI should call for reinforcements.");
+    }
+
+    return 0;
+}
+
+
+
+
+
+

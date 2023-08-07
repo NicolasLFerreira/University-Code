@@ -16,3 +16,4 @@ int floatToASCII();
 int inputComputation();
 int supermanOrBatman();
 int gradePercentToLetter();
+int gameAIResponse();
