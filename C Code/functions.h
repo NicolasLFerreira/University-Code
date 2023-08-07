@@ -17,3 +17,4 @@ int inputComputation();
 int supermanOrBatman();
 int gradePercentToLetter();
 int gameAIResponse();
+int triangleTypeIdentifier();

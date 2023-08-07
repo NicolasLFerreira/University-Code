@@ -4,12 +4,22 @@
 
 void main()
 {
-    // int age = 0;
-    // char string[8] = "nicolas";
+    int a[1] = {1};
 
-    // printf("%s", string);
+    a[0] = 3;
+    a[5] = 25;
 
-    // return;
+    printf("%i\n", a[5]);
+
+    int *ptr = &a[5];
+
+    printf("%i\n", ptr);
+
+    *ptr = 30;
+
+    printf("%i\n", *ptr);
+
+    return;
     while (true)
     {
         gameAIResponse();

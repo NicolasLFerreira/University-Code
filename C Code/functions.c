@@ -227,7 +227,7 @@ int multiplicationTable()
 
 int squareCalculator()
 {
-    printf("What is the length of one side?\n\n");
+    printf("What is the length of one length?\n\n");
 
     int sideLength = 0;
     scanf("%i", &sideLength);
@@ -484,8 +484,26 @@ int gameAIResponse()
     return 0;
 }
 
+int triangleTypeIdentifier()
+{
+    int length1, length2, length3;
+    int same = 0;
 
+    printf("Enter the first side length:\n");
+    scanf("%i", &length1);
+    printf("Enter the second side length:\n");
+    scanf("%i", &length2);
+    printf("Enter the third side length:\n");
+    scanf("%i", &length3);
 
+    if (length1 == length2)
+        same++;
+    if (length1 == length3)
+        same++;
+    if (length2 == length3)
+        same++;
 
+    printf("\nThis is a%s triangle.", (same == 0 ? " scalene" : (same == 1 ? "n isosceles" : "n equilateral")));
 
-
+    return 0;
+}
