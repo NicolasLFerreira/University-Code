@@ -407,10 +407,46 @@ int supermanOrBatman()
     printf("Which hero is your favourite, Superman (S) or Batman (B)?\n");
     scanf(" %c", &input);
 
-    if (input == 'S' || input == 's') printf("The user's favourite super hero is Superman");
-    else if (input == 'B' || input == 'b') printf("The user's favourite super hero is Batman");
-    else printf("Invalid response!");
+    if (input == 'S' || input == 's')
+        printf("The user's favourite super hero is Superman");
+    else if (input == 'B' || input == 'b')
+        printf("The user's favourite super hero is Batman");
+    else
+        printf("Invalid response!");
 
     return 0;
 }
 
+int gradePercentToLetter()
+{
+    float percent;
+    char *grade;
+
+    printf("Please enter your Practical Test 1 percentage:\n");
+    scanf("%f", &percent);
+
+    if (percent >= 90)
+        grade = "A+";
+    else if (percent >= 85)
+        grade = "A";
+    else if (percent >= 80)
+        grade = "A-";
+    else if (percent >= 75)
+        grade = "B+";
+    else if (percent >= 70)
+        grade = "B";
+    else if (percent >= 65)
+        grade = "B-";
+    else if (percent >= 60)
+        grade = "C+";
+    else if (percent >= 55)
+        grade = "C";
+    else if (percent >=50)
+        grade = "C-";
+    else
+        grade = "D";
+        
+    printf("%f%% is a '%s'", percent, grade);
+
+    return 0;
+}

@@ -6,7 +6,7 @@ void main()
 {
     while (true)
     {
-        inputComputation();
+        gradePercentToLetter();
     }
 
     // int number = 5;

@@ -15,3 +15,4 @@ int digitCounter();
 int floatToASCII();
 int inputComputation();
 int supermanOrBatman();
+int gradePercentToLetter();
