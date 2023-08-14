@@ -527,3 +527,11 @@ int monthToNumberDays()
     printf("Invalid month!");
     return 0;
 }
+
+int countDownFrom70(){
+    for (int i = 70; i >= 0; i-=2)
+    {
+        printf("%i\n", i);
+    }
+    return 0;
+}
