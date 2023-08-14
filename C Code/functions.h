@@ -18,3 +18,4 @@ int supermanOrBatman();
 int gradePercentToLetter();
 int gameAIResponse();
 int triangleTypeIdentifier();
+int monthToNumberDays();

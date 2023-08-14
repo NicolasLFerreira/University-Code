@@ -507,3 +507,23 @@ int triangleTypeIdentifier()
 
     return 0;
 }
+
+int monthToNumberDays()
+{
+    int month = 0;
+    char* days = "";
+
+    printf("Enter a month (Jan is 1, Dec is 12):\n");
+    scanf("%i", &month);
+
+    if (month >= 1 && month <= 12)
+    {
+        if (month == 2) days = "28 or 29";
+        else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) days = "31";
+        else days = "30";
+        printf("That month has %s days in it.\n", days);
+        return 0;
+    }
+    printf("Invalid month!");
+    return 0;
+}

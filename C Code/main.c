@@ -4,6 +4,13 @@
 
 void main()
 {
+    while (true)
+    {
+        monthToNumberDays();
+    }
+}
+
+void test(){
     int a[1] = {1};
 
     a[0] = 3;
@@ -20,8 +27,4 @@ void main()
     printf("%i\n", *ptr);
 
     return;
-    while (true)
-    {
-        gameAIResponse();
-    }
 }
