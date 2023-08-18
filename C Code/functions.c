@@ -630,3 +630,27 @@ int simpleRepeater()
 
     return 0;
 }
+
+int factorialLoop()
+{
+    int number = 0;
+    int result = 1;
+
+    printf("Enter a non-negative whole number:\n");
+    scanf("%i", &number);
+
+    if (number < 0)
+    {
+        printf("Bad Input! %i is negative...", number);
+        return 0;
+    }
+
+    for (int i = 1; i <= number; i++)
+    {
+        result *= i;
+    }
+
+    printf("%i! is %i", number, result);
+
+    return 0;
+}
