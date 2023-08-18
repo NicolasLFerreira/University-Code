@@ -568,3 +568,46 @@ int steppingWithAForLoop()
 
     return 0;
 }
+
+int basicCalculator()
+{
+    char oper = 0;
+    int left = 0;
+    int right = 0;
+
+    Printf("Operator? Left Operand? Right Operand?\n");
+    scanf(" %c", &oper);
+    scanf("%i", &left);
+    scanf("%i", &right);
+
+    if (right == 0 && oper == '/')
+    {
+        printf("Unable to compute divide by zero!");
+        return 0;
+    }
+
+    printf("Computing: %i %c %i\n", left, oper, right);
+
+    switch (oper)
+    {
+    case ('+'):
+        left += right;
+        break;
+    case ('*'):
+        left *= right;
+        break;
+    case ('-'):
+        left -= right;
+        break;
+    case ('/'):
+        left /= right;
+        break;
+    default:
+        left = 0;
+        break;
+    }
+
+    printf("Result: %i", left);
+
+    return 0;
+}

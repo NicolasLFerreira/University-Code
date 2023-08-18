@@ -21,3 +21,4 @@ int triangleTypeIdentifier();
 int monthToNumberDays();
 int countDownFrom70();
 int steppingWithAForLoop();
+int basicCalculator();
