@@ -654,3 +654,54 @@ int factorialLoop()
 
     return 0;
 }
+
+int insertValue()
+{
+    int array[100];
+    int size = 0;
+    int value = 0;
+    int old = 0;
+    int index = 0;
+
+    printf("Input total number of elements required:\n");
+    scanf("%i", &size);
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("Input element [%i]:\n", i);
+        scanf("%i", &array[i]);
+    }
+
+    printf("\nBefore insertion:\n");
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("Element [%i] is %i\n", i, array[i]);
+    }
+
+    printf("\nInput a new value to insert:\n");
+    scanf("%i", &value);
+
+    printf("Input where to insert the value %i:\n", value);
+    scanf("%i", &index);
+
+    old = array[index];
+    array[index] = value;
+    value = old;
+    for (int i = index + 1; i < size + 1; i++)
+    {
+        old = array[i];
+        array[i] = value;
+        value = old;
+    }
+
+    printf("After insertion:\n");
+    for (int i = 0; i < size + 1; i++)
+    {
+        printf("Element [%i] is %i\n", i, array[i]);
+    }
+
+    return 0;
+}
+
+int simpleDecryption(){}

@@ -24,3 +24,5 @@ int steppingWithAForLoop();
 int basicCalculator();
 int simpleRepeater();
 int factorialLoop();
+int insertValue();
+int simpleDecryption();
