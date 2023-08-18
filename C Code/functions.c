@@ -611,3 +611,22 @@ int basicCalculator()
 
     return 0;
 }
+
+int simpleRepeater()
+{
+    char symbol = 0;
+    int repeat = 0;
+
+    printf("ASCII Symbol?\n");
+    scanf(" %c", &symbol);
+
+    printf("Repeat Count?\n");
+    scanf("%i", &repeat);
+
+    for (int i = 0; i < repeat; i++)
+    {
+        printf("%c ", symbol);
+    }
+
+    return 0;
+}
