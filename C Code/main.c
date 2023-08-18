@@ -10,7 +10,8 @@ void main()
     }
 }
 
-void test(){
+void pointerTesting()
+{
     int a[1] = {1};
 
     a[0] = 3;

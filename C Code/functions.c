@@ -511,16 +511,19 @@ int triangleTypeIdentifier()
 int monthToNumberDays()
 {
     int month = 0;
-    char* days = "";
+    char *days = "";
 
     printf("Enter a month (Jan is 1, Dec is 12):\n");
     scanf("%i", &month);
 
     if (month >= 1 && month <= 12)
     {
-        if (month == 2) days = "28 or 29";
-        else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) days = "31";
-        else days = "30";
+        if (month == 2)
+            days = "28 or 29";
+        else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+            days = "31";
+        else
+            days = "30";
         printf("That month has %s days in it.\n", days);
         return 0;
     }
@@ -528,10 +531,40 @@ int monthToNumberDays()
     return 0;
 }
 
-int countDownFrom70(){
-    for (int i = 70; i >= 0; i-=2)
+int countDownFrom70()
+{
+    for (int i = 70; i >= 0; i -= 2)
     {
         printf("%i\n", i);
     }
+    return 0;
+}
+
+int steppingWithAForLoop()
+{
+    int start = 0;
+    int stop = 0;
+    int step = 0;
+
+    printf("Starting number:\n");
+    scanf("%i", &start);
+
+    printf("Stopping number:\n");
+    scanf("%i", &stop);
+
+    printf("Step size:\n");
+    scanf("%i", &step);
+
+    printf("\nStarting at %i\n", start);
+
+    for (int i = start; i < stop; i += step)
+    {
+        printf("In loop: %i\n", i);
+    }
+
+    printf("Stopping at %i\n", stop);
+
+    printf("%i", (int)(((start - stop) + 2) / step));
+
     return 0;
 }

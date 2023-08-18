@@ -19,3 +19,5 @@ int gradePercentToLetter();
 int gameAIResponse();
 int triangleTypeIdentifier();
 int monthToNumberDays();
+int countDownFrom70();
+int steppingWithAForLoop();
