@@ -704,4 +704,22 @@ int insertValue()
     return 0;
 }
 
-int simpleDecryption(){}
+int simpleDecryption()
+{
+    char secretWord[128];
+
+    printf("Enter a secret word:\n");
+    scanf("%s", secretWord);
+
+    for (int i = 0; secretWord[i] != '\0'; i++)
+    {
+        if (secretWord[i] == 'a' || secretWord[i] == 'A')
+            secretWord[i] += 25;
+        else
+            secretWord[i]--;
+    }
+
+    printf("Decrypted: %s", secretWord);
+
+    return 0;
+}
