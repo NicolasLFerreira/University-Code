@@ -28,3 +28,4 @@ int insertValue();
 int simpleDecryption();
 int firstNameValidator();
 int loopWithPseudoCode();
+int divisibleBySeven();

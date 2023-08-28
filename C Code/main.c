@@ -4,17 +4,13 @@
 
 void main()
 {
-    int x = 5;
-    int *px = &x;
+    int c = 0 % 7;
+    printf("%i", c);
 
-    printf("px: %i\n", px);
-    printf("x: %i\n\n", x);
-
-    int y = (int)px;
-    int *py = (int *)y;
-
-    printf("py stored address: %i\n", py);
-    printf("py value: %i", *py);
+    return;
+    int a = -10;
+    int b = ~(a - 1);
+    printf("%i", b);
 
     return;
     while (true)
@@ -23,7 +19,7 @@ void main()
     }
 }
 
-void pointerTesting()
+void pointerFlexibilityTest()
 {
     int a[1] = {1};
 
@@ -39,6 +35,23 @@ void pointerTesting()
     *ptr = 30;
 
     printf("%i\n", *ptr);
+
+    return;
+}
+
+void pointerTesting()
+{
+    int x = 5;
+    int *px = &x;
+
+    printf("px: %i\n", px);
+    printf("x: %i\n\n", x);
+
+    int y = (int)px;
+    int *py = (int *)y;
+
+    printf("py stored address: %i\n", py);
+    printf("py value: %i", *py);
 
     return;
 }

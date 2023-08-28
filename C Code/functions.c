@@ -742,8 +742,10 @@ int firstNameValidator()
         {
             for (int i = 1; name[i] != '\0'; i++)
             {
-                if (name[i] >= 97 && name[i] <= 123) valid = 1;
-                else{
+                if (name[i] >= 97 && name[i] <= 123)
+                    valid = 1;
+                else
+                {
                     valid = 0;
                     printf("Invalid input!\n");
                     break;
@@ -757,7 +759,8 @@ int firstNameValidator()
     return 0;
 }
 
-int loopWithPseudoCode() {
+int loopWithPseudoCode()
+{
     int X;
 
     printf("Enter a number X:\n");
@@ -765,13 +768,36 @@ int loopWithPseudoCode() {
 
     for (int n = 0; n < X; n++)
     {
-        if (n > 4){
+        if (n > 4)
+        {
             printf("%i\n", n);
         }
-        else{
+        else
+        {
             printf("%i\n", 9 - n);
         }
     }
-    
+
+    return 0;
+}
+
+int divisibleBySeven()
+{
+    int input, count = 0;
+
+    printf("Enter a whole number:\n");
+    scanf("%i", &input);
+
+    if (input <= 0)
+        input = (~input) + ++count;
+
+    for (int i = 1; i <= (unsigned int)input; i++)
+    {
+        if (i % 7 == 0)
+            count++;
+    }
+
+    printf("%i numbers between 1 and %i are \ndivisible by seven with no remainder.", count, input);
+
     return 0;
 }
