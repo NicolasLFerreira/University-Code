@@ -756,3 +756,22 @@ int firstNameValidator()
 
     return 0;
 }
+
+int loopWithPseudoCode() {
+    int X;
+
+    printf("Enter a number X:\n");
+    scanf("%i", &X);
+
+    for (int n = 0; n < X; n++)
+    {
+        if (n > 4){
+            printf("%i\n", n);
+        }
+        else{
+            printf("%i\n", 9 - n);
+        }
+    }
+    
+    return 0;
+}

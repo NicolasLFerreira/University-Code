@@ -27,3 +27,4 @@ int factorialLoop();
 int insertValue();
 int simpleDecryption();
 int firstNameValidator();
+int loopWithPseudoCode();
