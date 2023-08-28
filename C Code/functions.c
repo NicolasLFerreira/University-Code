@@ -575,7 +575,7 @@ int basicCalculator()
     int left = 0;
     int right = 0;
 
-    Printf("Operator? Left Operand? Right Operand?\n");
+    printf("Operator? Left Operand? Right Operand?\n");
     scanf(" %c", &oper);
     scanf("%i", &left);
     scanf("%i", &right);
@@ -720,6 +720,39 @@ int simpleDecryption()
     }
 
     printf("Decrypted: %s", secretWord);
+
+    return 0;
+}
+
+int firstNameValidator()
+{
+    char name[100];
+    int valid = 0;
+
+    while (!valid)
+    {
+        printf("What is your first name?\n\n");
+        scanf("%s", name);
+
+        if (name[0] < 65 || name[0] > 90)
+        {
+            printf("Invalid input!\n");
+        }
+        else
+        {
+            for (int i = 1; name[i] != '\0'; i++)
+            {
+                if (name[i] >= 97 && name[i] <= 123) valid = 1;
+                else{
+                    valid = 0;
+                    printf("Invalid input!\n");
+                    break;
+                }
+            }
+        }
+    }
+
+    printf("%s is a valid first name.", name);
 
     return 0;
 }

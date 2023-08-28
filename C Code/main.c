@@ -4,6 +4,19 @@
 
 void main()
 {
+    int x = 5;
+    int *px = &x;
+
+    printf("px: %i\n", px);
+    printf("x: %i\n\n", x);
+
+    int y = (int)px;
+    int *py = (int *)y;
+
+    printf("py stored address: %i\n", py);
+    printf("py value: %i", *py);
+
+    return;
     while (true)
     {
         monthToNumberDays();
