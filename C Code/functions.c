@@ -821,3 +821,32 @@ int stringToUpper()
 
     return 0;
 }
+
+int diamondPattern()
+{
+    int rows, columns, insertion;
+
+    printf(">\n");
+    scanf("%i", &rows);
+
+    if (rows % 2 == 0)
+        columns = rows - 1;
+    else
+        columns = rows;
+
+    for (int row = 0; row < rows; row++)
+    {
+        for (int column = 0; column < columns; column++)
+        {
+            if (insertion){
+                printf("*");
+            }
+            else{
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
