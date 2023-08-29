@@ -32,3 +32,4 @@ int divisibleBySeven();
 int stringToUpper();
 int diamondPatternDebugging();
 int diamondPattern();
+int fruitAndVegetableIdentifier();

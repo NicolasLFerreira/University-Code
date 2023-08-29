@@ -6,7 +6,7 @@ void main()
 {
     while (true)
     {
-        diamondPattern();
+        fruitAndVegetableIdentifier();
     }
 }
 

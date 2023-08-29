@@ -895,7 +895,8 @@ int diamondPattern()
     printf(">\n");
     scanf("%i", &rows);
 
-    if (rows == 0) {
+    if (rows == 0)
+    {
         printf("Too small!");
         return 0;
     }
@@ -932,6 +933,39 @@ int diamondPattern()
             }
         }
         printf("\n");
+    }
+
+    return 0;
+}
+
+int fruitAndVegetableIdentifier()
+{
+    const char *fruits[] = {"apple", "banana", "orange", "melon", "tomato"};
+    const char *vegetables[] = {"broccoli", "carrot", "onion", "potato", "spinach"};
+
+    char input[50];
+
+    printf("Please input the item to identify:\n");
+
+    while (1)
+    {
+        scanf("%s", input);
+
+        for (int i = 0; i < 5; i++)
+        {
+            if (strcmp(input, fruits[i]) == 0)
+            {
+                printf("%s is fruit.\n", input);
+                return 0;
+            }
+            if (strcmp(input, vegetables[i]) == 0)
+            {
+                printf("%s is vegetable.\n", input);
+                return 0;
+            }
+        }
+
+        printf("%s is not a fruit or vegetable, try again:\n", input);
     }
 
     return 0;
