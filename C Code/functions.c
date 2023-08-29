@@ -822,12 +822,83 @@ int stringToUpper()
     return 0;
 }
 
-int diamondPattern()
+int diamondPatternDebugging()
 {
-    int rows, columns, insertion;
+    int rows, columns;
+    int insertion, fakeColumn, fakeRow;
+    int formula;
 
     printf(">\n");
     scanf("%i", &rows);
+
+    if (rows % 2 == 0)
+        columns = rows - 1;
+    else
+        columns = rows;
+
+    // DEBUG
+    printf("Rows: %i | Columns: %i\n\n", rows, columns);
+
+    printf("%i, %i\n\n", columns, columns / 2);
+
+    printf("    ");
+
+    for (int i = 0; i < columns; i++)
+    {
+        printf("%i", i);
+    }
+    printf("\n");
+
+    for (int row = 0; row < rows; row++)
+    {
+        printf("%i ->", row); // DEBUG
+        for (int column = 0; column < columns; column++)
+        {
+            if (row < (rows / 2))
+            {
+                formula = (columns - (row * 2 + 1)) / 2;
+                if (column >= formula && column < columns - formula)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf(" ");
+                }
+            }
+            else
+            {
+                fakeColumn = columns - column - 1;
+                fakeRow = rows - row - 1;
+
+                formula = (columns - (fakeRow * 2 + 1)) / 2;
+                if (fakeColumn >= formula && fakeColumn < columns - formula)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf(" ");
+                }
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+int diamondPattern()
+{
+    int rows, columns, columnUsing, rowUsing, formula;
+
+    printf(">\n");
+    scanf("%i", &rows);
+
+    if (rows == 0) {
+        printf("Too small!");
+        return 0;
+    }
 
     if (rows % 2 == 0)
         columns = rows - 1;
@@ -838,10 +909,25 @@ int diamondPattern()
     {
         for (int column = 0; column < columns; column++)
         {
-            if (insertion){
+            if (row < (rows / 2))
+            {
+                columnUsing = column;
+                rowUsing = row;
+            }
+            else
+            {
+                columnUsing = columns - column - 1;
+                rowUsing = rows - row - 1;
+            }
+
+            formula = (columns - (rowUsing * 2 + 1)) / 2;
+
+            if (columnUsing >= formula && columnUsing < columns - formula)
+            {
                 printf("*");
             }
-            else{
+            else
+            {
                 printf(" ");
             }
         }

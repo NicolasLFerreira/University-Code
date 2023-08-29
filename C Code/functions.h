@@ -30,4 +30,5 @@ int firstNameValidator();
 int loopWithPseudoCode();
 int divisibleBySeven();
 int stringToUpper();
+int diamondPatternDebugging();
 int diamondPattern();
