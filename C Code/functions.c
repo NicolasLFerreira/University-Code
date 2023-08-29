@@ -783,21 +783,41 @@ int loopWithPseudoCode()
 
 int divisibleBySeven()
 {
-    int input, count = 0;
+    int input, changed, count = 0;
 
     printf("Enter a whole number:\n");
     scanf("%i", &input);
+    changed = input;
 
     if (input <= 0)
-        input = (~input) + ++count;
+        changed = (~input) + ++count;
 
-    for (int i = 1; i <= (unsigned int)input; i++)
+    for (int i = 1; i <= changed; i++)
     {
         if (i % 7 == 0)
             count++;
     }
 
     printf("%i numbers between 1 and %i are \ndivisible by seven with no remainder.", count, input);
+
+    return 0;
+}
+
+int stringToUpper()
+{
+    char input[100];
+
+    printf("Please enter your name:\n");
+    fgets(input, sizeof(input), stdin);
+
+    for (int i = 0; i <= 20; i++)
+    {
+        if (input[i] >= 97 && input[i] <= 123)
+            input[i] -= 32;
+    }
+    input[20] = '\0';
+
+    printf("%s\n", input);
 
     return 0;
 }

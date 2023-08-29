@@ -4,19 +4,17 @@
 
 void main()
 {
-    int c = 0 % 7;
-    printf("%i", c);
+    while (true)
+    {
+        stringToUpper();
+    }
+}
 
-    return;
+void TwoSComplement()
+{
     int a = -10;
     int b = ~(a - 1);
     printf("%i", b);
-
-    return;
-    while (true)
-    {
-        monthToNumberDays();
-    }
 }
 
 void pointerFlexibilityTest()

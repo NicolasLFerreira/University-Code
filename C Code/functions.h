@@ -29,3 +29,4 @@ int simpleDecryption();
 int firstNameValidator();
 int loopWithPseudoCode();
 int divisibleBySeven();
+int stringToUpper();
