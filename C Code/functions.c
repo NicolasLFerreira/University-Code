@@ -1113,13 +1113,17 @@ void print_assessments(int learning_outcome)
     }
 
     printf("\nReporting Journal\n");
-    if (learning_outcome <= 6) printf("Practical Test 1\n");
-    if (learning_outcome <= 8) printf("Practical Test 2\n");
-    if (learning_outcome <= 9) printf("Practical Test 3\n");
+    if (learning_outcome <= 6)
+        printf("Practical Test 1\n");
+    if (learning_outcome <= 8)
+        printf("Practical Test 2\n");
+    if (learning_outcome <= 9)
+        printf("Practical Test 3\n");
     printf("Final Practical Exam");
 }
 
-int learningOutcomeAssessmentCover(){
+int learningOutcomeAssessmentCover()
+{
     int outcome;
 
     printf("Learning Outcome?\n");
@@ -1143,23 +1147,131 @@ float compute_distance3d(struct Point3D p1, struct Point3D p2);
 
 int PointDistanceCalculator(void)
 {
-	struct Point3D p1;
-	struct Point3D p2;
-	
-	scanf("%f", &p1.x);
-	scanf("%f", &p1.y);
-	scanf("%f", &p1.z);
-	scanf("%f", &p2.x);
-	scanf("%f", &p2.y);
-	scanf("%f", &p2.z);
+    struct Point3D p1;
+    struct Point3D p2;
 
-	float distance = compute_distance3d(p1, p2);
-	printf("distance between two points is %f.", distance);
+    scanf("%f", &p1.x);
+    scanf("%f", &p1.y);
+    scanf("%f", &p1.z);
+    scanf("%f", &p2.x);
+    scanf("%f", &p2.y);
+    scanf("%f", &p2.z);
 
-	return 0;
+    float distance = compute_distance3d(p1, p2);
+    printf("distance between two points is %f.", distance);
+
+    return 0;
 }
 
 float compute_distance3d(struct Point3D p1, struct Point3D p2)
 {
     return sqrt(pow(2, p2.x - p1.x) + pow(2, p2.y - p1.y) + pow(2, p2.z - p1.z));
 }
+
+// Rocket drawing program
+
+void print_nozzle(int height)
+{
+    for (int row = 0; row < height / 2; row++)
+    {
+        for (int col = 0; col < height / 2 - row; col++)
+        {
+            printf(" ");
+        }
+
+        printf("/");
+
+        for (int col = 0; col < row * 2; col++)
+        {
+            printf(" ");
+        }
+
+        printf("\\\n");
+    }
+}
+
+void print_lids(int width)
+{
+    printf("+");
+    for (int col = 0; col < width; col++)
+    {
+        printf("-");
+    }
+    printf("+\n");
+}
+
+void print_body(int height, int width)
+{
+    print_lids(width);
+
+    for (int row = 0; row < height; row++)
+    {
+        printf("|");
+        for (int col = 0; col < width; col++)
+        {
+            printf(" ");
+        }
+        printf("|\n");
+    }
+
+    print_lids(width);
+}
+
+void print_logo(int width)
+{
+    for (int row = 0; row < 3; row++)
+    {
+        printf("|");
+
+        for (int col = 0; col < (width - 6) / 2; col++)
+        {
+            printf(" ");
+        }
+
+        if (row == 0)
+        {
+            printf(" N    ");
+        }
+        else if (row == 1)
+        {
+            printf("    Z ");
+        }
+        else if (row == 2)
+        {
+            printf("Rocket");
+        }
+
+        for (int col = 0; col < (width - 6) / 2; col++)
+        {
+            printf(" ");
+        }
+
+        printf("|\n");
+    }
+}
+
+int rocketDrawing()
+{
+    int width, height;
+
+    printf("Rocket body width (minimum 6)?\n");
+    scanf("%i", &width);
+
+    printf("Rocket body height?\n");
+    scanf("%i", &height);
+
+    print_nozzle(width);
+    print_body(height, width);
+    print_logo(width);
+    print_body(height, width);
+    print_nozzle(width);
+
+    return 0;
+}
+
+//
+
+
+
+
+
