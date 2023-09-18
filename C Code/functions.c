@@ -1000,3 +1000,43 @@ int highestOfThreeProgram()
 
     return 0;
 }
+
+// Dinner bill calculator
+
+int compute_bill(float starterPrice, float mainPrice, float dessertPrice)
+{
+    return starterPrice + mainPrice + dessertPrice;
+}
+
+void print_bill(float starterPrice, float mainPrice, float dessertPrice)
+{
+    printf("Starter: $%.2f\n", starterPrice);
+    printf("Main:    $%.2f\n", mainPrice);
+    printf("Dessert: $%.2f\n", dessertPrice);
+    printf("---------------\n");
+    printf("Total:   $%.2f\n", compute_bill(starterPrice, mainPrice, dessertPrice));
+    
+}
+
+int dinnerBillCalculator()
+{
+    float starterPrice = 0.0f;
+	float mainPrice = 0.0f;
+	float dessertPrice = 0.0f;
+
+	printf("Starter price? ");
+	scanf("%f", &starterPrice);
+
+	printf("Main price? ");
+	scanf("%f", &mainPrice);
+
+	printf("Dessert price? ");
+	scanf("%f", &dessertPrice);
+
+	printf("\n");
+
+	// TODO: Call printBill
+	print_bill(starterPrice, mainPrice, dessertPrice);
+
+	return 0;
+}
