@@ -910,6 +910,10 @@ int diamondPattern()
     {
         for (int column = 0; column < columns; column++)
         {
+            // Ternary operation alternative:
+            // columnUsing = row < (rows / 2) ? column : columns - column - 1;
+            // rowUsing = row < (rows / 2) ? row : rows - row - 1;
+
             if (row < (rows / 2))
             {
                 columnUsing = column;
@@ -967,6 +971,32 @@ int fruitAndVegetableIdentifier()
 
         printf("%s is not a fruit or vegetable, try again:\n", input);
     }
+
+    return 0;
+}
+
+// Highest of three program
+
+int find_maximum(float number1, float number2, float number3)
+{
+    float greater = number1 > number2 ? number1 : number2;
+    return greater > number3 ? greater : number3;
+}
+
+int highestOfThreeProgram()
+{
+    float number1, number2, number3;
+
+    printf("Please enter the first number:\n");
+    scanf("%f", &number1);
+
+    printf("Please enter the second number:\n");
+    scanf("%f", &number2);
+
+    printf("Please enter the third number:\n");
+    scanf("%f", &number3);
+
+    printf("The maximum number is %f\n", find_maximum(number1, number2, number3));
 
     return 0;
 }
