@@ -1001,7 +1001,7 @@ int highestOfThreeProgram()
     return 0;
 }
 
-// Dinner bill calculator
+// Dinner bill calculator program
 
 int compute_bill(float starterPrice, float mainPrice, float dessertPrice)
 {
@@ -1015,28 +1015,117 @@ void print_bill(float starterPrice, float mainPrice, float dessertPrice)
     printf("Dessert: $%.2f\n", dessertPrice);
     printf("---------------\n");
     printf("Total:   $%.2f\n", compute_bill(starterPrice, mainPrice, dessertPrice));
-    
 }
 
 int dinnerBillCalculator()
 {
     float starterPrice = 0.0f;
-	float mainPrice = 0.0f;
-	float dessertPrice = 0.0f;
+    float mainPrice = 0.0f;
+    float dessertPrice = 0.0f;
 
-	printf("Starter price? ");
-	scanf("%f", &starterPrice);
+    printf("Starter price? ");
+    scanf("%f", &starterPrice);
 
-	printf("Main price? ");
-	scanf("%f", &mainPrice);
+    printf("Main price? ");
+    scanf("%f", &mainPrice);
 
-	printf("Dessert price? ");
-	scanf("%f", &dessertPrice);
+    printf("Dessert price? ");
+    scanf("%f", &dessertPrice);
 
-	printf("\n");
+    printf("\n");
 
-	// TODO: Call printBill
-	print_bill(starterPrice, mainPrice, dessertPrice);
+    // TODO: Call printBill
+    print_bill(starterPrice, mainPrice, dessertPrice);
 
-	return 0;
+    return 0;
+}
+
+// Hex digit identifier program
+
+int is_digit(char input)
+{
+    return (input >= 'a' && input <= 'f') ||
+                   (input >= 'A' && input <= 'F') ||
+                   (input >= '0' && input <= '9')
+               ? 1
+               : 0;
+}
+
+int hexDigitIdentifier()
+{
+    char input = 0;
+    scanf(" %c", &input);
+
+    printf("> %i\n", is_digit(input));
+
+    return 0;
+}
+
+// Inverted triangle printer program
+
+void draw_inverted_triangle(int height)
+{
+    for (int col = 0; col < height * 2; col++)
+    {
+        printf("_");
+    }
+
+    printf("\n");
+
+    for (int row = 0; row < height; row++)
+    {
+        for (int col = 0; col < row; col++)
+        {
+            printf(" ");
+        }
+
+        printf("\\");
+
+        for (int col = 0; col < (height * 2) - 2 * (row + 1); col++)
+        {
+            printf(" ");
+        }
+
+        printf("/\n");
+    }
+}
+
+int invertedTrianglePrinter()
+{
+    int height;
+
+    printf("enter height:\n\n");
+    scanf("%i", &height);
+
+    draw_inverted_triangle(height);
+
+    return 0;
+}
+
+// Learning outcomes assessment cover program
+
+void print_assessments(int learning_outcome)
+{
+    if (learning_outcome < 1 || learning_outcome > 10)
+    {
+        printf("Invalid Learning Outcome.");
+        return;
+    }
+
+    printf("\nReporting Journal\n");
+    if (learning_outcome <= 6) printf("Practical Test 1\n");
+    if (learning_outcome <= 8) printf("Practical Test 2\n");
+    if (learning_outcome <= 9) printf("Practical Test 3\n");
+    printf("Final Practical Exam");
+}
+
+int learningOutcomeAssessmentCover(){
+    int outcome;
+
+    printf("Learning Outcome?\n");
+    scanf("%i", &outcome);
+
+    print_assessments(outcome);
+
+    return 0;
 }
