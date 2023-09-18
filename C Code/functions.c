@@ -1273,7 +1273,8 @@ int rocketDrawing()
 
 char to_lower(char input)
 {
-    if (input < 65 || input > 90) return 0;
+    if (input < 65 || input > 90)
+        return 0;
     return input + 32;
 }
 
@@ -1289,4 +1290,51 @@ int upperToLower()
     return 0;
 }
 
-//
+// logic gates program
+
+void nand_gate(int a, int b)
+{
+    printf("%i", !(a && b));
+}
+
+void nor_gate(int a, int b)
+{
+    printf("%i", !(a || b));
+}
+
+void xor_gate(int a, int b)
+{
+    printf("%i", (a && !b) || (!a && b));
+}
+
+void xnor_gate(int a, int b)
+{
+    printf("%i", !((a && !b) || (!a && b)));
+}
+
+int logicGates()
+{
+    int a = 0, b = 1;
+
+    printf("a b           a NAND b    a NOR b    a XOR b    a XNOR b\n");
+
+    for (int row = 0; row < 4; row++)
+    {
+        if (row > 1)
+            a = 1;
+        b = !b;
+
+        printf("%i %i", a, b);
+        printf("           ");
+        nand_gate(a, b);
+        printf("           ");
+        nor_gate(a, b);
+        printf("          ");
+        xor_gate(a, b);
+        printf("          ");
+        xnor_gate(a, b);
+        printf("\n");
+    }
+
+    return 0;
+}
