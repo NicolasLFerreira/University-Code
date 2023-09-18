@@ -1129,3 +1129,37 @@ int learningOutcomeAssessmentCover(){
 
     return 0;
 }
+
+// Point distance calculator program
+
+struct Point3D
+{
+    float x;
+    float y;
+    float z;
+};
+
+float compute_distance3d(struct Point3D p1, struct Point3D p2);
+
+int PointDistanceCalculator(void)
+{
+	struct Point3D p1;
+	struct Point3D p2;
+	
+	scanf("%f", &p1.x);
+	scanf("%f", &p1.y);
+	scanf("%f", &p1.z);
+	scanf("%f", &p2.x);
+	scanf("%f", &p2.y);
+	scanf("%f", &p2.z);
+
+	float distance = compute_distance3d(p1, p2);
+	printf("distance between two points is %f.", distance);
+
+	return 0;
+}
+
+float compute_distance3d(struct Point3D p1, struct Point3D p2)
+{
+    return sqrt(pow(2, p2.x - p1.x) + pow(2, p2.y - p1.y) + pow(2, p2.z - p1.z));
+}
