@@ -1269,9 +1269,24 @@ int rocketDrawing()
     return 0;
 }
 
+// Upper to lower program
+
+char to_lower(char input)
+{
+    if (input < 65 || input > 90) return 0;
+    return input + 32;
+}
+
+int upperToLower()
+{
+    char input;
+
+    printf("Please input a letter:\n");
+    scanf("%c", &input);
+
+    printf("%c's lowercase is %c", input, to_lower(input));
+
+    return 0;
+}
+
 //
-
-
-
-
-
