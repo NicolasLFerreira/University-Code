@@ -1339,7 +1339,7 @@ int logicGates()
     return 0;
 }
 
-// vowel checker program
+// Vowel checker program
 
 int is_vowel(char input)
 {
@@ -1365,4 +1365,44 @@ int vowelChecker()
     return 0;
 }
 
-//
+// Number comparator program
+
+void print_equal(int a, int b)
+{
+    if (a != b)
+        printf("Not ");
+    printf("Equal [%i vs %i]\n", a, b);
+}
+
+void print_largest(int a, int b)
+{
+    int largest = a > b ? a : b;
+
+    printf("%i is largest [%i vs %i]\n", largest, a, b);
+}
+
+void print_smallest(int a, int b)
+{
+    int smallest = a < b ? a : b;
+
+    printf("%i is smallest [%i vs %i]", smallest, a, b);
+}
+
+int numberComparator(){
+    int a, b;
+
+    printf("Please enter the first number:\n");
+    scanf("%i", &a);
+
+    printf("Please enter the second number:\n");
+    scanf("%i", &b);
+
+    print_equal(a, b);
+    print_largest(a , b);
+    print_smallest(a, b);
+
+    return 0;
+}
+
+
+
