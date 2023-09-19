@@ -1338,3 +1338,31 @@ int logicGates()
 
     return 0;
 }
+
+// vowel checker program
+
+int is_vowel(char input)
+{
+    char vowels[] = "aeiouAEIOU";
+
+    for (int i = 0; i < 10; i++)
+    {
+        if (input == vowels[i])
+            return 1;
+    }
+
+    return 0;
+}
+
+int vowelChecker()
+{
+    char input;
+
+    scanf("%c", &input);
+
+    printf("> %i", is_vowel(input));
+
+    return 0;
+}
+
+//
