@@ -1388,7 +1388,8 @@ void print_smallest(int a, int b)
     printf("%i is smallest [%i vs %i]", smallest, a, b);
 }
 
-int numberComparator(){
+int numberComparator()
+{
     int a, b;
 
     printf("Please enter the first number:\n");
@@ -1398,11 +1399,33 @@ int numberComparator(){
     scanf("%i", &b);
 
     print_equal(a, b);
-    print_largest(a , b);
+    print_largest(a, b);
     print_smallest(a, b);
 
     return 0;
 }
 
+// Pizza slices distributor program
 
+int calculate_pizza_share(int number)
+{
+    return (int)floor(8 / number);
+}
 
+int pizzaSlicesDistributor()
+{
+    int people;
+
+    printf("How many people?\n");
+    scanf("%i", &people);
+    
+    if (people < 1)
+    {
+        printf("Error");
+        return 0;
+    }
+
+    printf("%i people get %i slice(s) each.", people, calculate_pizza_share(people));
+
+    return 0;
+}
