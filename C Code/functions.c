@@ -1468,3 +1468,31 @@ int isAlphabeticalCharacter()
 
     return 0;
 }
+
+// triangle drawing program
+
+void draw_triangle(int height)
+{
+    for (int row = 0; row < height; row++)
+    {
+        for (int col = 0; col < height - row; col++)
+        {
+            
+        }
+
+        for (int col = 0; col < height * 2; col++)
+        {
+            
+        }
+    }
+}
+
+int triangleDrawingProgram()
+{
+    int height;
+
+    printf("");
+    scanf("");
+
+    return 0;
+}
