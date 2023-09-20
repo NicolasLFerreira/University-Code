@@ -1418,7 +1418,7 @@ int pizzaSlicesDistributor()
 
     printf("How many people?\n");
     scanf("%i", &people);
-    
+
     if (people < 1)
     {
         printf("Error");
@@ -1426,6 +1426,45 @@ int pizzaSlicesDistributor()
     }
 
     printf("%i people get %i slice(s) each.", people, calculate_pizza_share(people));
+
+    return 0;
+}
+
+// lower to upper program
+
+char to_upper(char input)
+{
+    if (input >= 97 && input <= 123)
+        return input - 32;
+    else
+        return 0;
+}
+
+int lowerToUpper()
+{
+    char input;
+
+    printf("Please enter a letter: ");
+    scanf(" %c", &input);
+
+    printf("%c", to_upper(input));
+
+    return 0;
+}
+
+// is alphabetical character program
+
+int is_letter(char input)
+{
+    return ((input >= 97 && input <= 123) || (input >= 65 && input <= 90));
+}
+
+int isAlphabeticalCharacter()
+{
+    char input;
+
+    scanf(" %c", &input);
+    printf("> %i", is_letter(input));
 
     return 0;
 }
