@@ -1533,7 +1533,7 @@ char *print_colour(int wavelength)
     return "invisible";
 }
 
-int main()
+int colourWavelength()
 {
     int wavelength;
 
@@ -1544,3 +1544,27 @@ int main()
 
     return 0;
 }
+
+// smaller of two program
+
+int find_minimum(int a, int b)
+{
+    return a < b ? a : b;
+}
+
+int smallerOfTwo()
+{
+    int a, b;
+
+    printf("Please input number 1: \n");
+    scanf("%i", &a);
+
+    printf("Please input number 2: \n");
+    scanf("%i", &b);
+
+    printf("The minimum number of %i and %i is %i\n", a, b, find_minimum(a, b));
+
+    return 0;
+}
+
+//
