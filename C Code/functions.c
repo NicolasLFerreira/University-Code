@@ -1567,4 +1567,35 @@ int smallerOfTwo()
     return 0;
 }
 
+// hotel bill program
+
+float compute_bill(int nights, float rate, float bar)
+{
+    return (nights * rate) + bar;
+}
+
+void print_bill(int nights, float rate, float bar)
+{
+    printf("Nights:    %d\n", nights);
+    printf("Room rate: $%6.2f\n", rate);
+    printf("Minibar:   $%6.2f\n", bar);
+    printf("-----------------\n");
+    printf("Total:     $%.2f", compute_bill(nights, rate, bar));
+}
+
+int hotelBill()
+{
+    int nights;
+    float rate, bar;
+
+    printf("Number of Nights? Room rate? Minibar?\n");
+    scanf("%d", &nights);
+    scanf("%d", &rate);
+    scanf("%d", &bar);
+
+    print_bill(nights, rate, bar);
+
+    return 0;
+}
+
 //
