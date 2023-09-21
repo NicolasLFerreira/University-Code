@@ -1598,4 +1598,20 @@ int hotelBill()
     return 0;
 }
 
-//
+// ascii range
+
+int is_digit(char input)
+{
+    return input >= '0' && input <= '9';
+}
+
+int asciiRange()
+{
+    char input;
+
+    scanf(" %c", &input);
+
+    printf("> %d", is_digit(input));
+
+    return 0;
+}
