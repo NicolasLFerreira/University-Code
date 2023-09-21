@@ -1475,15 +1475,22 @@ void draw_triangle(int height)
 {
     for (int row = 0; row < height; row++)
     {
-        for (int col = 0; col < height - row; col++)
+        for (int col = 0; col < height - (row + 1); col++)
         {
-            
+            printf(" ");
         }
 
-        for (int col = 0; col < height * 2; col++)
+        printf("/");
+
+        for (int col = 0; col < row * 2; col++)
         {
-            
+            if (row == height - 1)
+                printf("_");
+            else
+                printf(" ");
         }
+
+        printf("\\\n");
     }
 }
 
@@ -1491,8 +1498,49 @@ int triangleDrawingProgram()
 {
     int height;
 
-    printf("");
-    scanf("");
+    printf("enter height:\n");
+    scanf("%i", &height);
+
+    return 0;
+}
+
+// colour wavelength program
+
+int range(int value, int max, int min)
+{
+    return (value >= min && value <= max);
+}
+
+char *print_colour(int wavelength)
+{
+    // char *array[7] = {"Red", "Orange", "Yellow", "Green", "Cyan", "Blue", "Violet"};
+
+    if (range(wavelength, 700, 635))
+        return "Red";
+    else if (range(wavelength, 635, 590))
+        return "Orange";
+    else if (range(wavelength, 590, 560))
+        return "Yellow";
+    else if (range(wavelength, 560, 520))
+        return "Green";
+    else if (range(wavelength, 520, 490))
+        return "Cyan";
+    else if (range(wavelength, 490, 450))
+        return "Blue";
+    else if (range(wavelength, 450, 400))
+        return "Violet";
+
+    return "invisible";
+}
+
+int main()
+{
+    int wavelength;
+
+    printf("Enter a wavelength in nanometers:\n");
+    scanf("%i", &wavelength);
+
+    printf("%inm is %s", wavelength, print_colour(wavelength));
 
     return 0;
 }
