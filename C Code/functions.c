@@ -1733,3 +1733,34 @@ int coordinatesConversion(void)
     print_cartesian(check);
     return 0;
 }
+
+// movie details program
+
+struct Movie
+{
+    char title[50];
+    int minutes;
+    float tomatometer;
+};
+
+void print_super_hero(struct Movie heroMovie)
+{
+    printf("Movie title:        %s\n", heroMovie.title);
+    printf("Runtime in minutes: %i\n", heroMovie.minutes);
+    printf("Tomatometer Score:  %.2f\n", heroMovie.tomatometer);
+}
+
+int main(void)
+{
+    struct Movie movie;
+
+    sprintf(movie.title, "Batman Returns");
+    movie.minutes = 126;
+    movie.tomatometer = 0.81f;
+
+    print_super_hero(movie);
+
+    return 0;
+}
+
+//
