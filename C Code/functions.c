@@ -1831,3 +1831,75 @@ int main()
 
     return 0;
 }
+
+// colour enumeration program
+
+enum Colour
+{
+    RED,
+    GREEN,
+    BLUE,
+    CYAN,
+    MAGENTA,
+    YELLOW,
+    BLACK
+};
+
+void print_colour_as_text(enum Colour colour)
+{
+    switch (colour)
+    {
+    case 0:
+        printf("Red");
+        break;
+    case 1:
+        printf("Green");
+        break;
+    case 2:
+        printf("Blue");
+        break;
+    case 3:
+        printf("Cyan");
+        break;
+    case 4:
+        printf("Magenta");
+        break;
+    case 5:
+        printf("Yellow");
+        break;
+    case 6:
+        printf("Black");
+        break;
+    }
+
+    printf("\n")
+}
+
+void detect_RGB(enum Colour colour)
+{
+    printf("RGB: ");
+    if (colour > 2)
+        printf("Not ");
+    printf("Supported\n");
+}
+
+void detect_CMYK(enum Colour colour)
+{
+    printf("CMYK: ");
+    if (colour <= 2)
+        printf("Not ");
+    printf("Supported\n");
+}
+
+int colourEnumeration(void)
+{
+    // keep this
+    for (int i = 0; i < 70; i++)
+    {
+        print_colour_as_text(i % 7);
+        detect_RGB(i % 7);
+        detect_CMYK(i % 7);
+        printf("\n");
+    }
+    return 0;
+}
