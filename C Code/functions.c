@@ -1872,7 +1872,7 @@ void print_colour_as_text(enum Colour colour)
         break;
     }
 
-    printf("\n")
+    printf("\n");
 }
 
 void detect_RGB(enum Colour colour)
@@ -1901,5 +1901,55 @@ int colourEnumeration(void)
         detect_CMYK(i % 7);
         printf("\n");
     }
+    return 0;
+}
+
+// inverted triangle symbol program
+
+struct Triangle
+{
+    int height;
+    char symbol;
+};
+
+void print_inverted(struct Triangle triangle)
+{
+    for (int base = 0; base < triangle.height * 2; base++)
+    {
+        printf("_");
+    }
+
+    printf("\n");
+
+    for (int row = 0; row < triangle.height; row++)
+    {
+        for (int spaces = 0; spaces < row; spaces++)
+        {
+            printf(" ");
+        }
+
+        printf("\\");
+
+        for (int column = 0; column < (triangle.height - row - 1) * 2; column++)
+        {
+            printf(" %c", triangle.symbol);
+        }
+
+        printf("/\n");
+    }
+}
+
+int main(void)
+{
+    struct Triangle triangle;
+
+    printf("Inverted triangle's height?\n");
+    scanf("%d", &triangle.height);
+
+    printf("Inverted triangle's symbol?\n");
+    scanf("%c", &triangle.symbol);
+
+    print_inverted(triangle);
+
     return 0;
 }
