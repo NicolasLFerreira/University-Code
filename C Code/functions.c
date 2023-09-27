@@ -1763,4 +1763,39 @@ int main(void)
     return 0;
 }
 
-//
+// soft drink program
+
+struct Softdrink
+{
+    char name[50];
+    int size;
+    int energy;
+    float caffeine;
+    int max_daily;
+};
+
+void print_soft_drink(struct Softdrink drink)
+{
+    printf("A soft drink...\n\n");
+
+    printf("Name: %s\n", drink.name);
+    printf("Serving size: %i mL\n", drink.size);
+    printf("Energy content: %i kJ\n", drink.energy);
+    printf("Caffeine content: %f mg\n", drink.caffeine);
+    printf("Maximum daily intake: %i mL\n", drink.max_daily);
+}
+
+int main(void)
+{
+    struct Softdrink life_mod;
+
+    sprintf(life_mod.name, "Life Modulus");
+    life_mod.size = 250;
+    life_mod.energy = 529;
+    life_mod.caffeine = 80.5f;
+    life_mod.max_daily = 500;
+
+    print_soft_drink(life_mod);
+
+    return 0;
+}
