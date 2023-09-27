@@ -1594,11 +1594,10 @@ int hotelBill()
     scanf("%d", &bar);
 
     print_bill(nights, rate, bar);
-
     return 0;
 }
 
-// ascii range
+// ascii range program
 
 int is_digit(char input)
 {
@@ -1613,5 +1612,124 @@ int asciiRange()
 
     printf("> %d", is_digit(input));
 
+    return 0;
+}
+
+// weekday enumerator program
+
+enum Day
+{
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY
+};
+
+void print_day_category(enum Day day)
+{
+    if (day < 5)
+    {
+        printf("Weekday");
+    }
+    else
+    {
+        printf("Weekend");
+    }
+}
+
+void print_day_name(enum Day day)
+{
+    switch (day)
+    {
+    case 0:
+        printf("Monday");
+        break;
+    case 1:
+        printf("Tuesday");
+        break;
+    case 2:
+        printf("Wednesday");
+        break;
+    case 3:
+        printf("Thursday");
+        break;
+    case 4:
+        printf("Friday");
+        break;
+    case 5:
+        printf("Saturday");
+        break;
+    case 6:
+        printf("Sunday");
+        break;
+    }
+}
+
+int weekdayEnumerator()
+{
+    // keep this
+    for (int i = 0; i < 70; i++)
+    {
+        print_day_name(i % 7);
+        printf(" is a ");
+        print_day_category(i % 7);
+        printf("\n\n");
+    }
+    return 0;
+}
+
+// Coordinates conversion program
+
+struct Polar
+{
+    float r;
+    float theta;
+};
+
+struct Cartesian
+{
+    float x;
+    float y;
+};
+
+struct Polar convert_to_polar(struct Cartesian point)
+{
+    struct Polar coords = {sqrtf(powf(point.x, 2) + powf(point.y, 2)), atan2f(point.y, point.x)};
+    return coords;
+}
+
+struct Cartesian convert_to_cartesian(struct Polar point)
+{
+    struct Cartesian coords = {point.r * cosf(point.theta), point.r * sinf(point.theta)};
+    return coords;
+}
+
+void print_polar(struct Polar to_print)
+{
+    printf("(r, theta) = (%f, %f)\n", to_print.r, to_print.theta);
+}
+
+void print_cartesian(struct Cartesian to_print)
+{
+    printf("(x, y) = (%f, %f)\n", to_print.x, to_print.y);
+}
+
+int coordinatesConversion(void)
+{
+    struct Cartesian user_input;
+    struct Polar polar;
+    struct Cartesian check;
+    printf("Cartesian x?\n");
+    scanf("%f", &user_input.x);
+    printf("Cartesian y?\n");
+    scanf("%f", &user_input.y);
+    polar = convert_to_polar(user_input);
+    check = convert_to_cartesian(polar);
+
+    print_polar(polar);
+    print_cartesian(check);
     return 0;
 }

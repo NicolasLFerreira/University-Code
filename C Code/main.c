@@ -2,8 +2,20 @@
 #include <stdlib.h>
 #include "functions.h"
 
+typedef struct Animal
+{
+    int age;
+    int size;
+    int alive;
+};
+
 void main()
 {
+    struct Animal animal = {12, 20, 14};
+    struct Animal *pA;
+
+    
+
     while (true)
     {
         pointerFlexibilityTest();
