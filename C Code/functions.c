@@ -1430,7 +1430,7 @@ int pizzaSlicesDistributor()
     return 0;
 }
 
-// lower to upper program
+// lowercase to upper program
 
 char to_upper(char input)
 {
@@ -1440,7 +1440,7 @@ char to_upper(char input)
         return 0;
 }
 
-int lowerToUpper()
+int lowercaseToUpper()
 {
     char input;
 
@@ -1569,18 +1569,18 @@ int smallerOfTwo()
 
 // hotel bill program
 
-float compute_bill(int nights, float rate, float bar)
+float compute_bill_hotel(int nights, float rate, float bar)
 {
     return (nights * rate) + bar;
 }
 
-void print_bill(int nights, float rate, float bar)
+void print_bill_hotel(int nights, float rate, float bar)
 {
     printf("Nights:    %d\n", nights);
     printf("Room rate: $%6.2f\n", rate);
     printf("Minibar:   $%6.2f\n", bar);
     printf("-----------------\n");
-    printf("Total:     $%.2f", compute_bill(nights, rate, bar));
+    printf("Total:     $%.2f", compute_bill_hotel(nights, rate, bar));
 }
 
 int hotelBill()
@@ -1593,13 +1593,13 @@ int hotelBill()
     scanf("%d", &rate);
     scanf("%d", &bar);
 
-    print_bill(nights, rate, bar);
+    print_bill_hotel(nights, rate, bar);
     return 0;
 }
 
 // ascii range program
 
-int is_digit(char input)
+int is_digit2(char input)
 {
     return input >= '0' && input <= '9';
 }
@@ -1610,7 +1610,7 @@ int asciiRange()
 
     scanf(" %c", &input);
 
-    printf("> %d", is_digit(input));
+    printf("> %d", is_digit2(input));
 
     return 0;
 }
@@ -1750,7 +1750,7 @@ void print_super_hero(struct Movie heroMovie)
     printf("Tomatometer Score:  %.2f\n", heroMovie.tomatometer);
 }
 
-int main(void)
+int movieDetails(void)
 {
     struct Movie movie;
 
@@ -1785,7 +1785,7 @@ void print_soft_drink(struct Softdrink drink)
     printf("Maximum daily intake: %i mL\n", drink.max_daily);
 }
 
-int main(void)
+int softDrink(void)
 {
     struct Softdrink life_mod;
 
@@ -1796,6 +1796,38 @@ int main(void)
     life_mod.max_daily = 500;
 
     print_soft_drink(life_mod);
+
+    return 0;
+}
+
+// student details query program
+
+struct Student
+{
+    char firstName[50];
+    char lastName[50];
+    int code;
+};
+
+struct Student query_student()
+{
+    struct Student student;
+
+    printf("Input first name:\n");
+    scanf("%s", student.firstName);
+    printf("Input last name:\n");
+    scanf("%s", student.lastName);
+    printf("Input stream code:\n");
+    scanf("%d", &student.code);
+
+    return student;
+}
+
+int main()
+{
+    struct Student query = query_student();
+
+    printf("%s %s is in stream %d.", query.firstName, query.lastName, query.code);
 
     return 0;
 }

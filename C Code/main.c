@@ -2,23 +2,11 @@
 #include <stdlib.h>
 #include "functions.h"
 
-typedef struct Animal
-{
-    int age;
-    int size;
-    int alive;
-};
-
 void main()
 {
-    struct Animal animal = {12, 20, 14};
-    struct Animal *pA;
-
-    
-
     while (true)
     {
-        pointerFlexibilityTest();
+        
     }
 }
 
@@ -64,4 +52,38 @@ void pointerTesting()
     printf("py value: %i", *py);
 
     return;
+}
+
+void findSmallAndBig()
+{
+    int a = -1, b = 34, c = 12;
+    int big = 0, small = 0;
+
+    // if (a > b)
+    // {
+    //     big = a;
+    //     small = b;
+    // }
+    // else
+    // {
+    //     big = b;
+    //     small = a;
+    // }
+
+    // if (c > big)
+    // {
+    //     big = c;
+    // }
+    // else
+    // {
+    //     if (small > c)
+    //     {
+    //         small = c;
+    //     }
+    // }
+
+    big = (a > b ? a : b) > c ? (a > b ? a : b) : c;
+    small = (a < b ? a : b) < c ? (a < b ? a : b) : c;
+
+    printf("Greater: %d\nSmaller: %d", big, small);
 }
