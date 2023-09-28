@@ -1965,7 +1965,7 @@ struct Circle
 
 float distance_between(struct Circle c1, struct Circle c2)
 {
-    return sqrtf(powf(fabs(c2.x_position - c1.x_position), 2) + powf((fabs(c2.y_position - c1.y_position)), 2))- (c2.radius + c1.radius);
+    return sqrtf(powf(fabs(c2.x_position - c1.x_position), 2) + powf((fabs(c2.y_position - c1.y_position)), 2)) - (c2.radius + c1.radius);
 }
 
 int distanceBetweenCircles(void)
@@ -1990,4 +1990,57 @@ int distanceBetweenCircles(void)
     return 0;
 }
 
-// 
+// is inside rectangle program
+
+enum Result
+{
+    OUTSIDE,
+    INSIDE
+};
+
+struct Point
+{
+    int x;
+    int y;
+};
+
+struct Rectangle
+{
+    struct Point bottom_left;
+    struct Point top_right;
+};
+
+float computer_area(struct Rectangle rectangle)
+{
+    return 9;
+}
+
+enum Result is_inside(struct Point point, struct Rectangle rectangle)
+{
+    if ((point.x >= rectangle.bottom_left.x && point.x <= rectangle.top_right.x) &&
+        (point.y >= rectangle.bottom_left.y && point.y <= rectangle.top_right.y))
+        return INSIDE;
+    else
+        return OUTSIDE;
+}
+
+int main(void)
+{
+    struct Point point;
+    int x = 0;
+    int y = 0;
+    scanf("%d", &x);
+    scanf("%d", &y);
+    point.x = x;
+    point.y = y;
+
+    struct Rectangle rectangle;
+    rectangle.bottom_left.x = 1;
+    rectangle.bottom_left.y = 1;
+    rectangle.top_right.x = 4;
+    rectangle.top_right.y = 4;
+
+    printf("Rectangle's area is %.2f\n", computer_area(rectangle));
+    printf("The point is%sinside of the rectangle.", is_inside(point, rectangle) == INSIDE ? " " : " not ");
+    return 0;
+}
