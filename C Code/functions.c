@@ -1939,7 +1939,7 @@ void print_inverted(struct Triangle triangle)
     }
 }
 
-int main(void)
+int invertedTriangleSymbol()
 {
     struct Triangle triangle;
 
@@ -1953,3 +1953,41 @@ int main(void)
 
     return 0;
 }
+
+// distance between circles program
+
+struct Circle
+{
+    float radius;
+    float x_position;
+    float y_position;
+};
+
+float distance_between(struct Circle c1, struct Circle c2)
+{
+    return sqrtf(powf(fabs(c2.x_position - c1.x_position), 2) + powf((fabs(c2.y_position - c1.y_position)), 2))- (c2.radius + c1.radius);
+}
+
+int distanceBetweenCircles(void)
+{
+    struct Circle c1;
+    struct Circle c2;
+
+    int r1 = 0;
+    int r2 = 0;
+    scanf("%d", &r1);
+    scanf("%d", &r2);
+    c1.radius = r1;
+    c2.radius = r2;
+    c1.x_position = 11;
+    c1.y_position = 22;
+    c2.x_position = 4;
+    c2.y_position = 6;
+
+    float distance = distance_between(c1, c2);
+    printf("distance between two circle is %f.", distance);
+
+    return 0;
+}
+
+// 
