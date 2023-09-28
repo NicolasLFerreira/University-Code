@@ -2024,7 +2024,7 @@ enum Result is_inside(struct Point point, struct Rectangle rectangle)
         return OUTSIDE;
 }
 
-int main(void)
+int isInsideRectangle(void)
 {
     struct Point point;
     int x = 0;
@@ -2044,3 +2044,37 @@ int main(void)
     printf("The point is%sinside of the rectangle.", is_inside(point, rectangle) == INSIDE ? " " : " not ");
     return 0;
 }
+
+// cat management program
+
+struct Cat
+{
+    char name[50];
+    int age;
+    float weight;
+    float tail_length;
+};
+
+void print_cat(struct Cat a_cat)
+{
+    printf("Name:        %s\n", a_cat.name);
+    printf("Age:         %d\n", a_cat.age);
+    printf("Weight:      %.2f\n", a_cat.weight);
+    printf("Tail Length: %.2f\n", a_cat.tail_length);
+}
+
+int catManagement(void)
+{
+    struct Cat whiskers;
+
+    sprintf(whiskers.name, "Whiskers");
+    whiskers.age = 126;
+    whiskers.weight = 8;
+    whiskers.tail_length = 15;
+
+    print_cat(whiskers);
+
+    return 0;
+}
+
+//
