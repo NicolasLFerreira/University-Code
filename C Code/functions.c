@@ -2091,3 +2091,18 @@ int count_odds(int *dataArray, int size)
 
     return odds;
 }
+
+// reverse_string()
+
+void reverse_string(char *ptr)
+{
+    int length = strlen(ptr);
+    char current;
+
+    for (int i = 0; i < length/2; i++)  
+    {  
+        current = ptr[i];  
+        ptr[i] = ptr[length - i - 1];  
+        ptr[length - i - 1] = current;
+    }  
+}
