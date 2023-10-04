@@ -4,10 +4,25 @@
 
 void main()
 {
-    while (true)
-    {
-        
-    }
+    int h = 0;
+    int* pointer1 = &h;
+    int** pointer2 = &pointer1;
+
+    printf("%d\n", h);
+    printf("%d\n", h);
+    printf("%p\n", pointer1);
+    printf("%d\n", h);
+    printf("%p", pointer2);
+
+    return;
+    // float a = 1;
+    // float b = 2;
+    // float c = 1;
+
+    // float p = (-b + sqrtf((b * b) - (4 * a * c))) / (2 * a);
+    // float n = (-b - sqrtf((b * b) - (4 * a * c))) / (2 * a);
+
+    // printf("%f - %f", p, n);
 }
 
 void TwoSComplement()

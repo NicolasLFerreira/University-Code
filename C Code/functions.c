@@ -1823,7 +1823,7 @@ struct Student query_student()
     return student;
 }
 
-int main()
+int studentsQuery()
 {
     struct Student query = query_student();
 
@@ -2077,4 +2077,17 @@ int catManagement(void)
     return 0;
 }
 
-//
+// Count_odds()
+
+int count_odds(int *dataArray, int size)
+{
+    int odds = 0;
+
+    for (int i = 0; i < size; i++)
+    {
+        if (dataArray[i] % 2 != 0)
+            odds++;
+    }
+
+    return odds;
+}
