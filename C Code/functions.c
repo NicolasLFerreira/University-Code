@@ -2106,3 +2106,17 @@ void reverse_string(char *ptr)
         ptr[length - i - 1] = current;
     }  
 }
+
+// analyse()
+
+void analyse(char *code, int *p_a_count, int *p_z_count){
+    size_t size = strlen(code);
+    
+    *p_a_count = 0;
+    *p_z_count = 0;
+    
+    for (size_t i = 0; i < size; i++){
+        if (code[i] == 'A') ++*p_a_count;
+        if (code[i] == 'Z') ++*p_z_count;
+    }
+}
