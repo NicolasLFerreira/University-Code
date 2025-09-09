@@ -2,27 +2,39 @@
 #include <stdlib.h>
 #include "functions.h"
 
+struct Person {
+    int age;
+};
+
+void increment(int* abc){
+    ++*abc;
+}
+
+void printArray(int array[]){
+    for (int i = 0; i < 20; i++)
+    {
+        printf("%d\n", array[i]);
+    }
+}
+
 void main()
 {
-    int h = 0;
-    int* pointer1 = &h;
-    int** pointer2 = &pointer1;
+    int variable = 5;
+    int* pointerOfVariable = &variable;
 
-    printf("%d\n", h);
-    printf("%d\n", h);
-    printf("%p\n", pointer1);
-    printf("%d\n", h);
-    printf("%p", pointer2);
+    printf("variable: %d\n", variable);
+    printf("pointerOfVariable: %p\n", pointerOfVariable);
+    printf("*pointerOfVariable: %d\n\n", *pointerOfVariable);
 
-    return;
-    // float a = 1;
-    // float b = 2;
-    // float c = 1;
+    printf("Value: %d\n", variable);
 
-    // float p = (-b + sqrtf((b * b) - (4 * a * c))) / (2 * a);
-    // float n = (-b - sqrtf((b * b) - (4 * a * c))) / (2 * a);
+    increment(&variable);
 
-    // printf("%f - %f", p, n);
+    printf("Value after function: %d\n\n", variable);
+
+    int array[5] = {1,3,4,5,7 };
+
+    printArray(array);
 }
 
 void TwoSComplement()

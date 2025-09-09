@@ -2120,3 +2120,5 @@ void analyse(char *code, int *p_a_count, int *p_z_count){
         if (code[i] == 'Z') ++*p_z_count;
     }
 }
+
+// 
